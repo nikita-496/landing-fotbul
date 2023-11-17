@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar__header navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid p-0">
+              <a class="navbar-brand" href="#">
+                <img src="./img/logo-1.svg">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="navbar__header-link nav-link mx-2" aria-current="page" href="#tempo_de_futebol">Sobre o torneio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navbar__header-link nav-link mx-2" href="#caminho_para_o_sonho">Caminho para o sonho</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navbar__header-link nav-link mx-2" href="#sobre_a_academia">Sobre a Academia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navbar__header-link nav-link mx-2" href="#mapa_dos_torneios">Mapa dos torneios</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="sectiion-hero">
+        <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h1 class="hero__title text-center">
+                    Mostre seus talentos aos olheiros europeus em sua cidade
+                </h1>
+              </div>
+            <div class="sectiion-hero__col-middle row">
+                <div class="sectiion-hero__col_image col">
+                    <img 
+                    srcset="./img/team-w-390.png 390w, ./img/team.png 593w"
+                    sizes="(max-width: 700px) 390px,
+                        593px"
+                    src="./img/team.png"
+                    alt=""
+                >
+                    </img>
+                </div>
+                <div class="sectiion-hero__col_content col d-flex flex-column justify-content-center p-0">
+                  <p class="sectiion-hero__text"> Participe do torneio Tempo de futebol realizado em todo o estado do 
+                      Ceará e faça parte da academia de 
+                      futebol profissional Blockchain Sports
+                  </p>
+                  <a href="#submeta" class="btn-title form-btn">Submeter aplicação</a>
+                </div>
+            </div>
+            <div class="sectiion-hero__col-last row">
+              <div class="col p-0">
+                <div class="border-box-container">
+                    <img class="hero-card__blur_first hero-card__blur" src="./img/card-bg-blur.svg">
+                    <div class="border-box">  
+                        <div>
+                            <img class="sectiion-hero__col-last_img" src="./img/eye.svg"/>
+                        </div>
+                        <p class="hero-card__text ">Desenvolva seus talentos sob a supervisão de treinadores profissionais</p>
+                    </div>
+                </div>
+              </div>
+              <div class="col spacing p-0">
+                <div class="border-box-container">
+                    <img class="hero-card__blur_second hero-card__blur" src="./img/card-bg-blur.svg">
+                    <div class="border-box">  
+                        <div>
+                            <img class="sectiion-hero__col-last_img" src="./img/pay.svg"/>
+                        </div>
+                        <p class="hero-card__text_second hero-card__text ">Seja pago e concentre-se no jogo que você ama</p>
+                    </div>
+                </div>
+              </div>
+              <div class="col spacing p-0">
+                <div class="border-box-container">
+                    <img class="hero-card__blur_last hero-card__blur" src="./img/card-bg-blur.svg">
+                    <div class="border-box">  
+                        <div>
+                            <img class="sectiion-hero__col-last_img" src="./img/edit.svg"/>
+                        </div>
+                        <p class="hero-card__text_last hero-card__text">Assine seu primeiro contrato profissional</p>
+                    </div>
+                </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div> 
+        </div>          
+    </section>
+
+    <section id="tempo_de_futebol" class="sectiion-second">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section_title text-center">Tempo de futebol</h2>
+                </div>
+                <div class="d-flex justify-content-center col-12">
+                    <p class="sectiion_subtitle text-center">
+                        Uma grande série de torneios e eventos no estado do Ceará. Estamos à procura de candidatos para ingressar na Academia BlockchainSports
+                    </p>
+            </div>
+            <div class="sectiion-second_row-last row">
+                <div class="sectiion-second_col_man col">
+                   <img src="./img/man-blick.png">
+                </div>
+                <div class="slider sectiion-second_col_info col">
+                      <div class="border-box-container">
+                        <img class="sectiion-second_row-last_card-blur_first sectiion-second_row-last_card-blur" src="./img/card-bg-blur.svg">
+                          <div class="border-box">  
+                            <div class="image-wrapper">
+                                <img src="./img/ellipse.svg"/>
+                                <img class="image-abs" src="./img/cup.svg"/>
+                            </div>
+                              <p class="hero-card__text_first hero-card__text">Mais de <span class="list-col__text_green">50 torneios</span> <br> em todo o estado do Ceará</p>
+                          </div>
+                      </div>
+                        <div class="border-box-container">
+                            <img class="sectiion-second_row-last_card-blur_second sectiion-second_row-last_card-blur" src="./img/card-bg-blur.svg">
+                                <div class="border-box">
+                                    <div class="image-wrapper">
+                                        <img src="./img/ellipse.svg"/>
+                                        <img class="image-abs" src="./img/star.svg"/>
+                                    </div>
+                                    <p class="hero-card__text">Presença de <br> <span class="list-col__text_green">olheiros</span> europeus</p>
+                                </div>
+                        </div>
+                        <div class="border-box-container">   
+                            <img class="sectiion-second_row-last_card-blur_last sectiion-second_row-last_card-blur" src="./img/card-bg-blur.svg">
+                            <div class="border-box">
+                                <div class="image-wrapper">
+                                    <img src="./img/ellipse.svg"/>
+                                    <img class="image-abs" src="./img/user.svg"/>
+                                </div>
+                                <p class="hero-card__text"><span class="list-col__text_green">Dezenas</span> de milhares <br> de participantes</p>
+                            </div>
+                        </div>
+                      </div>  
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+    </section>
+
+    <section id="caminho_para_o_sonho" class="sectiion-third">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section_title text-center">Seu caminho para o sonho</h2>
+                </div>
+            </div>
+            <div class="card-row row">
+                <div class="col">
+                    <div data-aos="fade-right" class="border-box-container">   
+                        <img class="sectiion-second_row-last_card-blur_last sectiion-second_row-last_card-blur" src="./img/card-bg-blur.svg">
+                        <div class="border-box">
+                            <div class="image-wrapper">
+                                <img class="image-ellipse" src="./img/ellipse.svg"/>
+                                <img class="image-abs" src="./img/gift.svg"/>
+                            </div>
+                            <img class="stage_first stage" src="./img/1.svg">
+                            <h3 class="sectiion-third_title">
+                                Participe <br> do torneio
+                            </h3>
+                            <p class="sectiion-third_text hero-card__text hero-card__text">
+                                Mostre suas habilidades no futebol aos olheiros <br> da academia competindo com outros participantes
+                            </p>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" class="border-box-container">
+                        <img class="sectiion-second_row-last_card-blur_last sectiion-second_row-last_card-blur" src="./img/card-bg-blur.svg">
+                        <div class="border-box">
+                            <div class="image-wrapper">
+                                <img class="image-ellipse"src="./img/ellipse.svg"/>
+                                <img class="image-abs" src="./img/gift.svg"/>
+                            </div>
+                            <img class="stage_second stage" src="./img/2.svg">
+                            <h3 class="sectiion-third_title">
+                                Junte-se à Academia <br>Blockchain Sports (Ceará)
+                            </h3>
+                            <p class="sectiion-third_text hero-card__text hero-card__text">
+                                Desenvolva os seus talentos sob a orientação de treinadores 
+                                <br>experientes com aplicação das melhores metodologias do 
+                                <br>mundo, aproveite todas as condições: equipamento 
+                                <br>completo, campos, alojamento, alimentação e suporte
+                            </p>
+                        </div>
+                      </div>
+                      <div data-aos="fade-right" class="border-box-container">   
+                        <img class="sectiion-second_row-last_card-blur_last sectiion-second_row-last_card-blur" src="./img/card-bg-blur.svg">
+                        <div class="border-box">
+                            <div class="image-wrapper">
+                                <img class="image-ellipse" src="./img/ellipse.svg"/>
+                                <img class="image-abs" src="./img/gift.svg"/>
+                            </div>
+                            <img class="stage_second stage" src="./img/3.svg">
+                            <h3 class="sectiion-third_title">
+                                Assine contrato com <br> uma equipe profissional
+                            </h3>
+                            <p class="sectiion-third_text hero-card__text hero-card__text">
+                                Nossa academia é frequentada por olheiros de clubes de <br>futebol mundialmente famosos, o que oferece oportunidade <br>
+                                de assinar contrato com um time profissional e se tornar
+                                <br> jogador de futebol
+                            </p>
+                        </div>
+                      </div>
+                    </div> 
+            </div>
+    </section>
+
+    <section id="sobre_a_academia" class="sectiion-fourth">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section_title text-center">BlockchainSports Academy</h2>
+                </div>
+            </div>
+            <div class="list-row row">
+                <div class="list-col_first list-col col-12">
+                    <span class="sub">(01)</span>
+                    <p class="list-col__text_first list-col__text"> <span class="sub-p">(01)</span> <span><span class="list-col__text_green">Caminho</span> rápido para futebol profissional</span></p>
+                    <div class="image-absolute">
+                        <img class="team_mini" src="./img/team_mini.png">
+                    </div>
+                </div>
+                <div class="list-col_second list-col col-12">
+                    <span class="sub">(02)</span>
+                    <p class="list-col__text_second list-col__text_decore list-col__text"> <span class="sub-p">(02)</span> <span><span class="list-col__text_green">Modernos</span> complexos de treinamento</span></p>
+                    <div class="image-absolute">
+                        <img class="trainer" src="./img/trainer.png">
+                    </div>
+                </div>
+                <div class="list-col_third list-col col-12">
+                    <span class="sub">(03)</span>
+                    <p class="list-col__text_third list-col__text"><span class="sub-p">(03)</span>  <span><span class="list-col__text_green">Equipe</span> profissional de treinadores</span></p>
+                    <div class="image-absolute">
+                        <img class="money" src="./img/money.png">
+                    </div>
+                </div>
+                <div class="list-col_last list-col col-12">
+                    <span class="sub">(04)</span>
+                    <p class="list-col__text_last list-col__text"><span class="sub-p">(04)</span> <span><span class="list-col__text_green">Remuneração</span> para alunos desde o primeiro mês</span></p>
+                    <div class="image-absolute">
+                        <img class="group-team" src="./img/group-team.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mapa_dos_torneios" class="sectiion-last">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section_title">Mapa do Ceará</h2>
+                </div>
+            </div>
+            <div class="sectiion-last-row-last_event_first sectiion-last-row-last_event sectiion-last-row-last row">
+                <div class="col-2">
+                    <h4 class="col-title">Horário: <br> <spna class="text-mark">8:00 AM</spna></h4>
+                </div>
+                <div class="col-2">
+                    <h4 class="col-title">State: <br> <spna class="text-mark">Ceará</spna></h4>
+                </div>
+            </div>
+            <div class="sectiion-last-row-last row">
+                <div class="d-flex align-items-center
+                justify-content-center col-12 col-lg-5">
+                <img 
+                srcset="./img/land-w-220.png 220w, ./img/land.png 489w"
+                sizes="(max-width: 768px) 220px,
+                    489px"
+                src="./img/land.png"
+                alt=""
+            >
+                </div>
+                <div class="event-info d-felx align-items-center
+                justify-content-center
+                    text-col col-12  col-lg-6">
+                    <h5 class="sectiion-last-row-last_title">Calendário provisório</h5>
+                    <p class="text text-uppercase text-mark">
+                        26.11-Iguatu.Profa.MariaRosa Gouvêia, 200-352 - Sete de Setembro
+                    </p>
+                    <p class="text">
+                        29.11 - Centro, Jucás - State of Ceará
+                    </p>
+
+                    <p class="text">
+                        01.12 - Vila Confiança, 2, Várzea Alegre
+                    </p>
+                    <p class="text text-uppercase text-mark">
+                        03.12 - Francisco Martins de Souza, 2583 - Jardim Gonzaga, Juazeiro do Norte
+                    </p>
+                    <p class="text">
+                        05.12 - Morro Dourado, Brejo Santo - State of Ceará
+                    </p>
+                    <p class="text">
+                        07.12 - Rua Josè Dodô - Dom Bosco, Mauriti - CE
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <section id="submeta" class="sectiion-last-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section_title">Submeta aplicação, venha para o torneio e torne-se 
+                        um jogador de futebol profissional!</h2>
+                </div>
+            </div>
+            <div class="sectiion-last-1-card-row row">
+                <div class="col">
+                    <div class="border-box-container">
+                       <div class="sectiion-last-1-row row">
+                        <div class="sectiion-last-1-col col">
+                            <h4 class="sectiion-last-1-col__titile">Vou vir sozinho</h4>
+                             <a class="form-btn btn" data-bs-toggle="modal" href="#exampleModalToggle" role="button"><span class="btn-title">Enviar</span></a>
+                        </div>
+                        <div class="sectiion-last-1-card-col-image col">
+                            <img 
+                            srcset="./img/blur-w-90.svg 269w, ./img/blur.svg 450w"
+                            sizes="(max-width: 1200px) 269px,
+                                450px"
+                            src="./img/blur.svg"
+                            alt=""
+                            class="sectiion-last-1-card-col-image__blur"
+                        >
+                            <img 
+                                srcset="./img/man-2-w-161.png 161w, ./img/man-2.png 292w"
+                                sizes="(max-width: 1200px) 161px,
+                                    292px"
+                                src="./img/man-2.png"
+                                alt=""
+                                class="sectiion-last-1-card-col-image__man" 
+                            >
+                        </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border-box-container_team border-box-container">
+                        <div class="sectiion-last-1-row row">
+                            <div class="sectiion-last-1-col col">
+                                <h4 class="sectiion-last-1-col__titile_right sectiion-last-1-col__titile">Vou vir com a equipe</h4>
+                                <a class="form-btn btn" data-bs-toggle="modal" href="#exampleModalToggle2" role="button"><span class="btn-title">Enviar</span></a>
+                            </div>
+                            <div class="sectiion-last-1-card-col-image col">
+                                <img 
+                                    srcset="./img/blur-w-90.svg 269w, ./img/blur.svg 450w"
+                                    sizes="(max-width: 1200px) 269px,
+                                        450px"
+                                    src="./img/blur.svg"
+                                    alt=""
+                                    class="sectiion-last-1-card-col-image__blur"
+                                >
+                                <img 
+                                srcset="./img/team-2-w-267.png 271w, ./img/team-2.png 385w"
+                                sizes="(max-width: 1200px) 271px,
+                                    385px"
+                                src="./img/team-2.png"
+                                alt=""
+                                class="sectiion-last-1-card-col-image__team"
+                            >
+                            </div>
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+        <div class="footer-row">
+            <div class="col-left d-flex col-10">
+                <div class="footer-nav d-flex justify-content-start">
+                    <nav class="navbar__footer navbar navbar-expand-lg navbar-dark">
+                        
+                          
+                            <ul class="navbar-nav ms-auto">
+                              <li class="nav-item">
+                                <a class="navbar__header-link nav-link" aria-current="page" href="#tempo_de_futebol">Sobre o torneio</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="navbar__header-link nav-link" href="#caminho_para_o_sonho">Caminho para o sonho</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="navbar__header-link nav-link" href="#sobre_a_academia">Sobre a Academia</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="navbar__header-link nav-link" href="#mapa_dos_torneios">Mapa dos torneios</a>
+                              </li>
+                            </ul>
+                         
+                       
+                    </nav>
+                </div>
+                <div class="footer-logo d-flex justify-content-center ">
+                    <img  src="./img/logo-1.svg"/>
+                </div>
+                <div class="socials d-flex justify-content-center">
+                    <a href="https://www.instagram.com/tempo_futebol" class="link" target="_blank">
+                        <img src="./img/instagram.svg">
+                    </a>
+                    <a href="https://www.youtube.com/@blockchain_sports" class="link" target="_blank">
+                        <img src="./img/youtube.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="coopyright d-flex justify-content-center flex-column">
+                    <p>
+                        2023г.
+                    </p>
+                    <p>
+                        © All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="form-1">
+                    <div class="wrapper-input mb-3">
+                      <label for="inputNomeComplete" class="form-label">Nome completo</label>
+                      <input type="tect" class="form-control" id="inputNomeComplete" aria-describedby="emailHelp" placeholder="Fabricio RW">
+                      <img class="icon-warning" src="./img/warning.svg">
+                    </div>
+                    <div class="wrapper-input mb-3">
+                      <label for="inputPhone" class="form-label">Numero de telefone</label>
+                      <input type="number" class="form-control" id="inputPhone" placeholder="+7 (911)-506-32-15">
+                      <img class="icon-warning" src="./img/warning.svg">
+                    </div>
+                    <div class="wrapper-input mb-3">
+                        <label for="inputDate" class="form-label">Ano de nascimento</label>
+                        <input type="text" class="form-control" id="inputDate" placeholder="14.11.2023">
+                        <img class="icon-warning" src="./img/warning.svg">
+                      </div>
+                      <div class="wrapper-input mb-3">
+                        <label for="inputCity" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Rio de Janeiro">
+                        <img class="icon-warning" src="./img/warning.svg">
+                      </div>
+                      <div class="mb-3">
+                        <label for="inputMessanger" class="form-label">Mensageiro de contato (e.g. WhatsApp, etc.)</label>
+                        <input type="text" class="form-control" id="inputMessanger" placeholder="@telegram">
+                      </div>
+                      <div id="promptError" class="prompt-error mb-3">Por favor, preencha todos os campos requisitados</div>
+                      <div class="d-flex justify-content-center">
+                        <button type="submit" class="form-btn__modal form-btn btn"><span class="btn-title">Enviar</span></button>
+                      </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="form-2">
+                    <div class="wrapper-input mb-3">
+                      <label for="inputNomeComplete_2" class="form-label">Nome Completo do capitao</label>
+                      <input type="tect" class="form-control" id="inputNomeComplete_2" aria-describedby="emailHelp" placeholder="Fabricio RW">
+                      <img class="icon-warning" src="./img/warning.svg">
+                    </div>
+                    <div class="wrapper-input mb-3">
+                      <label for="inputPhone_2" class="form-label">Numero de telefone</label>
+                      <input type="number" class="form-control" id="inputPhone_2" placeholder="+7 (911)-506-32-15">
+                      <img class="icon-warning" src="./img/warning.svg">
+                    </div>
+                    <div class="wrapper-input mb-3">
+                        <label for="inputDate_2" class="form-label">Ano de nascimento</label>
+                        <input type="text" class="form-control" id="inputDate_2" placeholder="14.11.2023">
+                        <img class="icon-warning" src="./img/warning.svg">
+                      </div>
+                      <div class="wrapper-input mb-3">
+                        <label for="inputAmountPeopleTeam" class="form-label">Numero de pessoas na equipe</label>
+                        <input type="text" class="form-control" id="inputAmountPeopleTeam" placeholder="11">
+                        <img class="icon-warning" src="./img/warning.svg">
+                      </div>
+                      <div class="wrapper-input mb-3">
+                        <label for="inputTeamName" class="form-label">Nome de equipe</label>
+                        <input type="text" class="form-control" id="inputTeamName" placeholder="Zenit">
+                        <img class="icon-warning" src="./img/warning.svg">
+                      </div>
+                      <div class="wrapper-input mb-3">
+                        <label for="inputCity_2" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="inputCity_2" placeholder="Rio de Janeiro">
+                        <img class="icon-warning" src="./img/warning.svg">
+                      </div>
+                      <div class="mb-3">
+                        <label for="inputMessanger_2" class="form-label">Mensageiro de contato (e.g. WhatsApp, etc.)</label>
+                        <input type="text" class="form-control" id="inputMessanger_2" placeholder="@telegram">
+                      </div>
+                      <div id="promptError_2" class="prompt-error mb-3">Por favor, preencha todos os campos requisitados</div>
+                      <div class="d-flex justify-content-center">
+                        <button type="submit" class="form-btn__modal form-btn btn"><span class="btn-title">Enviar</span></button>
+                      </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="modal fade" id="success" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-body__success modal-body">
+                       
+                            <img class="success__image" src="./img/success.svg" alt="">
+                        
+                        <div class="success__content">
+                            <h4 class="success-title">Obrigado!</h4>
+                            <p class="success-subtitle">Sua inscrição foi enviada</p>
+                        </div>
+               
+                      <div class="d-flex justify-content-center">
+                        <button id="success__button"  class="form-btn__modal_success form-btn__modal form-btn btn"><span class="btn-title">Ok</span></button>
+                      </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./src/main.js"></script>
+    <script src="./src/slick-slider.js"></script>
+    <script>
+        AOS.init();
+    </script>    
+</body>
+</html>
