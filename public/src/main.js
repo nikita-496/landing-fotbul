@@ -14,8 +14,16 @@ let messanger = ''
 let messanger_2 = ''
 
 
+
 const promptError = document.getElementById('promptError')
 const promptError_2 = document.getElementById('promptError_2')
+
+$("#exampleModalToggle").on("hidden.bs.modal", function () {
+    promptError.style.display = 'none'
+});
+$("#exampleModalToggle2").on("hidden.bs.modal", function () {
+    promptError_2.style.display = 'none'
+});
 
 const inputNomeComplete = document.getElementById('inputNomeComplete')
 const inputPhone = document.getElementById('inputPhone')
