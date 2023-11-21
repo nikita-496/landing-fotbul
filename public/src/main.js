@@ -124,10 +124,6 @@ async function sendFormTg(payload, required , typeForm) {
     const token = "6628761032:AAHF88h4rp7Sr-omd5vHm2p68azfrOt6vcI"
     const chat_id = '-1002135830957'
 
-
-    $('#exampleModalToggle').modal('hide');
-    $('#exampleModalToggle2').modal('hide');
-
     if(typeForm === 1 && (required.nome_1 === '' || required.phone === '' 
         || required.date === '' || required.city === '')) {
         promptError_2.style.display = 'none'
@@ -157,7 +153,8 @@ async function sendFormTg(payload, required , typeForm) {
         }
       );
 
-    
+      $('#exampleModalToggle').modal('hide');
+      $('#exampleModalToggle2').modal('hide');
       const success = new bootstrap.Modal(document.getElementById('success'))
       success.show()
       const successButton = document.getElementById('success__button')
