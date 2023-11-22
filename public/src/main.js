@@ -170,23 +170,19 @@ async function sendFormTg(payload, required , typeForm) {
     promptError.style.display = 'none'
     promptError_2.style.display = 'none'
 
-    console.log('NEN', payload)
+    //console.log('NEN', payload)
 
-    /*const a = await fetch(
-        `https://script.googleusercontent.com/macros/echo?user_content_key=9_AcpNuIngCIdSJOo6CjMQIegiZ2J32CZOHhAGKId8ag-UNCCP-yE67wX8LmDJz1NXoDZ71kwZVOirCXs2Aq-dmp4FWgW3qtm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnF7SeAqThhRkeHlqZruNV4L6C-q3pISOjKiSU90etk4-RrXPLyNJTEW9UzMApJg5018VTaVAKyncz78I8mzsR8o&lib=MwkDIYF0QZSlrIYjzSAgxgr2d_W4mnunK
-        ?Nome completo=${required.nome_1}&Nome Completo do capitao=${required.nome_2}&Numero de telefone=${required.phone}
-        `,
-        {
-          method: "GET",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"
+    /* const a = await fetch(`https://script.google.com/macros/s/AKfycbyEoD-5ffOpElfV-bSFKWlI9Wg-phXQ18gkZ7e1HEHIhoikQajyxR2F3-hHMoZQSNS-/exec`, {
+        method: "POST",
+        body: JSON.stringify(
+            {'name' :required.nome_1}, 
+            {'Email': required.nome_1}, {'Subject': required.nome_1}, 
+            {'Phome': required.nome_1}, {'Message': required.nome_1}
+        ),
+      })
 
-          }
-        }
-      );
-      */
+    */
+      
 
     //console.log('text', payload)
     
