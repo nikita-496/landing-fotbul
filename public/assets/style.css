@@ -622,8 +622,8 @@ top: 15px
 }
 .icon-warning{
     position: absolute;
-    top: 50px;
-    right: 10px;
+    top: 40px;
+    right: -30px;
 }
 .form-control{
     background-color: rgba(250, 250, 250, 1) !important;
