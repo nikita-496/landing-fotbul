@@ -65,9 +65,9 @@ form_1.addEventListener('submit', () => {
         phone + 
         ", Ano de nascimento: " + 
         date + 
-        ", Cidade: " + 
+        ", Cidade #1: " + 
         city + 
-        ", Mensageiro de contato: " + 
+        ", Mensageiro de contato #1: " + 
         messanger +
         ", Sorce: " + 
         sbjs.get.current.src + 
@@ -77,7 +77,7 @@ form_1.addEventListener('submit', () => {
         sbjs.get.current.cmp + 
         ", Content: " + 
         sbjs.get.current.cnt
-    sendFormTg(payload_1, {nome_1, phone, date, city}, 1)
+    sendFormTg(payload_1, {nome_1, phone, date, city, messanger}, 1)
 })
 
 
@@ -131,9 +131,9 @@ form_2.addEventListener('submit', () => {
     amountPeopleTeam + 
     ", Nome de equipe: " +
     teamName +
-    ", Cidade: " + 
+    ", Cidade #2: " + 
     city_2 + 
-    ", Mensageiro de contato: " + 
+    ", Mensageiro de contato #2: " + 
     messanger_2 +
     ", Sorce: " + 
     sbjs.get.current.src + 
@@ -144,7 +144,7 @@ form_2.addEventListener('submit', () => {
     ", Content: " + 
     sbjs.get.current.cnt
 
-    sendFormTg(payload_2, {nome_2, phone_2, date_2, amountPeopleTeam, teamName, city_2} , 2)
+    sendFormTg(payload_2, {nome_2, phone_2, date_2, amountPeopleTeam, teamName, city_2, messanger_2} , 2)
 })
 
 
@@ -170,23 +170,19 @@ async function sendFormTg(payload, required , typeForm) {
     promptError.style.display = 'none'
     promptError_2.style.display = 'none'
 
-    //console.log('NEN', payload)
-
-    /* const a = await fetch(`https://script.google.com/macros/s/AKfycbyEoD-5ffOpElfV-bSFKWlI9Wg-phXQ18gkZ7e1HEHIhoikQajyxR2F3-hHMoZQSNS-/exec`, {
-        method: "POST",
-        body: JSON.stringify(
-            {'name' :required.nome_1}, 
-            {'Email': required.nome_1}, {'Subject': required.nome_1}, 
-            {'Phome': required.nome_1}, {'Message': required.nome_1}
-        ),
-      })
-
-    */
-      
-
-    //console.log('text', payload)
-    
+    const url = `https://script.google.com/macros/s/AKfycbzvN9DT6Es0Lm6wKhUoihIYAXt_kPGXDUt2Oq1bjazZX1uW9wdSEwG6N9afkE3El9qA/exec?Nome completo=${required.nome_1}&Numero de telefone-1=${required.phone}&Ano de nascimento-1=${required.date}&Cidade-1=${city}&Mensageiro de contato-1=${messanger}&Nome Completo do capitao=${required.nome_2}&Numero de telefone-2=${required.phone_2}&Ano de nascimento-2=${required.date_2}&Numero de pessoas na equipe=${required.amountPeopleTeam}&Nome de equipe=${required.teamName}&Cidade-2=${city_2}&Mensageiro de contato-2=${messanger_2}&Sorce=${sbjs.get.current.src}&Medium=${sbjs.get.current.mdm}&Campaign=${sbjs.get.current.cmp}&Content=${sbjs.get.current.cnt}`
+    let getResponse;
     try {
+        let getResults = await fetch(url, {method: 'Get', redirect: 'follow'});
+        getResponse = await getResults.json();
+    } catch (e) {
+        getResponse = {
+          "result" : "200OK",
+            "elapsedTime" : 0.0
+        }
+    }
+    
+   try {
       const response = await fetch(
         `https://api.telegram.org/bot${token}/sendMessage`,
         {
