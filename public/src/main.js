@@ -13,6 +13,10 @@ let city_2 = ''
 let messanger = ''
 let messanger_2 = ''
 
+//console.log('sbjs.get.current.src', sbjs.get.current.src)
+//console.log('sbjs.get.current.mdm', sbjs.get.current.mdm)
+//console.log('sbjs.get.current.cmp', sbjs.get.current.cmp)
+//console.log('sbjs.get.current.cnt', sbjs.get.current.cnt )
 
 
 const promptError = document.getElementById('promptError')
@@ -64,7 +68,15 @@ form_1.addEventListener('submit', () => {
         ", Cidade: " + 
         city + 
         ", Mensageiro de contato: " + 
-        messanger
+        messanger +
+        ", Sorce: " + 
+        sbjs.get.current.src + 
+        ", Medium: " + 
+        sbjs.get.current.mdm +
+        ", Campaign: " +
+        sbjs.get.current.cmp + 
+        ", Content: " + 
+        sbjs.get.current.cnt
     sendFormTg(payload_1, {nome_1, phone, date, city}, 1)
 })
 
@@ -122,7 +134,16 @@ form_2.addEventListener('submit', () => {
     ", Cidade: " + 
     city_2 + 
     ", Mensageiro de contato: " + 
-    messanger_2
+    messanger_2 +
+    ", Sorce: " + 
+    sbjs.get.current.src + 
+    ", Medium: " + 
+    sbjs.get.current.mdm +
+    ", Campaign: " +
+    sbjs.get.current.cmp + 
+    ", Content: " + 
+    sbjs.get.current.cnt
+
     sendFormTg(payload_2, {nome_2, phone_2, date_2, amountPeopleTeam, teamName, city_2} , 2)
 })
 
@@ -148,6 +169,7 @@ async function sendFormTg(payload, required , typeForm) {
     }
     promptError.style.display = 'none'
     promptError_2.style.display = 'none'
+    //console.log('text', payload)
     try {
       const response = await fetch(
         `https://api.telegram.org/bot${token}/sendMessage`,
