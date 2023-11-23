@@ -66,7 +66,7 @@ inputMessanger.addEventListener('input', (e) => {
 
 const form_1 = document.getElementById('form-1')
 
-form_1.addEventListener('submit', () => {
+form_1.addEventListener('click', () => {
     payload_1 =
         "Nome completo: " +
         nome_1 +
@@ -130,7 +130,7 @@ inputMessanger_2.addEventListener('input', (e) => {
 
 
 const form_2 = document.getElementById('form-2')
-form_2.addEventListener('submit', () => {
+form_2.addEventListener('click', () => {
     payload_2 =    
     "Nome Completo do capitao: " +
     nome_2 +
@@ -203,8 +203,6 @@ async function sendFormTg(payload, required , typeForm) {
               "elapsedTime" : 0.0
           }
       }
-
-      
 
     try {
       const response = await fetch(
