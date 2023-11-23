@@ -202,7 +202,7 @@ async function sendFormTg(payload, required , typeForm) {
 
       console.log('payload', payload)
 
-    /*try {
+    try {
       const response = await fetch(
         `https://api.telegram.org/bot${token}/sendMessage`,
         {
@@ -231,5 +231,5 @@ async function sendFormTg(payload, required , typeForm) {
       Array.from(buttonSend).forEach(el => {
         el.removeAttribute("disabled");
     })
-    }*/
+    }
   }
