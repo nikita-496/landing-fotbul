@@ -19,6 +19,7 @@ let messanger_2 = ''
 //console.log('sbjs.get.current.cnt', sbjs.get.current.cnt )
 
 
+
 const promptError = document.getElementById('promptError')
 const promptError_2 = document.getElementById('promptError_2')
 
@@ -35,12 +36,20 @@ const inputDate = document.getElementById('inputDate')
 const inputCity = document.getElementById('inputCity')
 const inputMessanger = document.getElementById('inputMessanger')
 
+
+var maskOptions = {
+    mask: '+55-00-0000-0000',
+    lazy: false
+} 
+var mask = new IMask(inputPhone, maskOptions);
+
+
 inputNomeComplete.addEventListener('input', (e) => {
     nome_1 = e.target.value
 })
 
 inputPhone.addEventListener('input', (e) => {
-    phone = e.target.value
+    phone = mask._value
 })
 
 inputDate.addEventListener('input', (e) => {
@@ -89,12 +98,14 @@ const inputTeamName = document.getElementById('inputTeamName')
 const inputCity_2 = document.getElementById('inputCity_2')
 const inputMessanger_2 = document.getElementById('inputMessanger_2')
 
+var mask_2 = new IMask(inputPhone_2, maskOptions);
+
 inputNomeComplete_2.addEventListener('input', (e) => {
     nome_2 = e.target.value
 })
 
 inputPhone_2.addEventListener('input', (e) => {
-    phone_2 = e.target.value
+    phone_2 = mask_2._value
 })
 
 inputDate_2.addEventListener('input', (e) => {
@@ -189,7 +200,9 @@ async function sendFormTg(payload, required , typeForm) {
           }
       }
 
-    try {
+      console.log('payload', payload)
+
+    /*try {
       const response = await fetch(
         `https://api.telegram.org/bot${token}/sendMessage`,
         {
@@ -218,5 +231,5 @@ async function sendFormTg(payload, required , typeForm) {
       Array.from(buttonSend).forEach(el => {
         el.removeAttribute("disabled");
     })
-    }
+    }*/
   }
