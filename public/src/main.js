@@ -207,10 +207,10 @@ async function sendFormTg(payload, required , typeForm) {
       const success = new bootstrap.Modal(document.getElementById('success'))
       success.show()
       const successButton = document.getElementById('success__button')
-      Array.from(buttonSend).forEach(el => {
-        el.removeAttribute("disabled");
-    })
       successButton.addEventListener('click', (e) => {
+        Array.from(buttonSend).forEach(el => {
+            el.removeAttribute("disabled");
+        })
         success.hide() 
     })
     } catch (err) {
