@@ -167,22 +167,29 @@ async function sendFormTg(payload, required , typeForm) {
         promptError_2.style.display = 'block'
         return
     }
+
+
     promptError.style.display = 'none'
     promptError_2.style.display = 'none'
 
-    const url = `https://script.google.com/macros/s/AKfycbzvN9DT6Es0Lm6wKhUoihIYAXt_kPGXDUt2Oq1bjazZX1uW9wdSEwG6N9afkE3El9qA/exec?Nome completo=${required.nome_1}&Numero de telefone-1=${required.phone}&Ano de nascimento-1=${required.date}&Cidade-1=${city}&Mensageiro de contato-1=${messanger}&Nome Completo do capitao=${required.nome_2}&Numero de telefone-2=${required.phone_2}&Ano de nascimento-2=${required.date_2}&Numero de pessoas na equipe=${required.amountPeopleTeam}&Nome de equipe=${required.teamName}&Cidade-2=${city_2}&Mensageiro de contato-2=${messanger_2}&Sorce=${sbjs.get.current.src}&Medium=${sbjs.get.current.mdm}&Campaign=${sbjs.get.current.cmp}&Content=${sbjs.get.current.cnt}`
-    let getResponse;
+    const buttonSend = document.querySelectorAll('.form-btn__modal_send')
+    Array.from(buttonSend).forEach(el => {
+        el.setAttribute('disabled', true)
+    })
+
+     const url = `https://script.google.com/macros/s/AKfycbzvN9DT6Es0Lm6wKhUoihIYAXt_kPGXDUt2Oq1bjazZX1uW9wdSEwG6N9afkE3El9qA/exec?Nome completo=${required.nome_1}&Numero de telefone-1=${required.phone}&Ano de nascimento-1=${required.date}&Cidade-1=${required.city}&Mensageiro de contato-1=${required.messanger}&Nome Completo do capitao=${required.nome_2}&Numero de telefone-2=${required.phone_2}&Ano de nascimento-2=${required.date_2}&Numero de pessoas na equipe=${required.amountPeopleTeam}&Nome de equipe=${required.teamName}&Cidade-2=${required.city_2}&Mensageiro de contato-2=${required.messanger_2}&Sorce=${sbjs.get.current.src}&Medium=${sbjs.get.current.mdm}&Campaign=${sbjs.get.current.cmp}&Content=${sbjs.get.current.cnt}`
+      let getResponse;
+      try {
+          let getResults = await fetch(url, {method: 'Get', redirect: 'follow'});
+          getResponse = await getResults.json();
+      } catch (e) {
+          getResponse = {
+            "result" : "200OK",
+              "elapsedTime" : 0.0
+          }
+      }
+
     try {
-        let getResults = await fetch(url, {method: 'Get', redirect: 'follow'});
-        getResponse = await getResults.json();
-    } catch (e) {
-        getResponse = {
-          "result" : "200OK",
-            "elapsedTime" : 0.0
-        }
-    }
-    
-   try {
       const response = await fetch(
         `https://api.telegram.org/bot${token}/sendMessage`,
         {
@@ -195,7 +202,6 @@ async function sendFormTg(payload, required , typeForm) {
         }
       );
 
-
       $('#exampleModalToggle').modal('hide');
       $('#exampleModalToggle2').modal('hide');
       const success = new bootstrap.Modal(document.getElementById('success'))
@@ -204,9 +210,10 @@ async function sendFormTg(payload, required , typeForm) {
   
       successButton.addEventListener('click', (e) => {
         success.hide()  
+        Array.from(buttonSend).forEach(el => {
+            el.removeAttribute("disabled");
+        })
     })
-  
-      console.log('response', response)
     } catch (err) {
       console.log(`Error: ${err}`);
     }
