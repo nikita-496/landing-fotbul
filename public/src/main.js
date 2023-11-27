@@ -110,7 +110,7 @@ inputNomeComplete_2.addEventListener('input', (e) => {
 })
 
 inputPhone_2.addEventListener('input', (e) => {
-    if(mask_2._value === '+55-__-____-____' || mask_2._value.length !== 16) {
+    if(mask_2._value === '+55-__-____-____' || mask_2._unmaskedValue.length !== 10) {
         phone = ''
     }
     else {
@@ -204,7 +204,7 @@ async function sendFormTg(payload, required , typeForm) {
     const time = currentDate.toLocaleTimeString('ru-RU', { timeZone: 'Europe/Moscow' })
     currentDate = `${currentDate.getDate()}.${currentDate.getMonth()+1}.${currentDate.getFullYear()} ${time}`
 
-     const url = `https://script.google.com/macros/s/AKfycbzvN9DT6Es0Lm6wKhUoihIYAXt_kPGXDUt2Oq1bjazZX1uW9wdSEwG6N9afkE3El9qA/exec?Nome completo=${required.nome_1}&Numero de telefone-1=${required.phone}&Ano de nascimento-1=${required.date}&Cidade-1=${required.city}&Mensageiro de contato-1=${required.messanger}&Nome Completo do capitao=${required.nome_2}&Numero de telefone-2=${required.phone_2}&Ano de nascimento-2=${required.date_2}&Numero de pessoas na equipe=${required.amountPeopleTeam}&Nome de equipe=${required.teamName}&Cidade-2=${required.city_2}&Mensageiro de contato-2=${required.messanger_2}&Sorce=${sbjs.get.current.src}&Medium=${sbjs.get.current.mdm}&Campaign=${sbjs.get.current.cmp}&Content=${sbjs.get.current.cnt}&Date=${currentDate}`
+     const url = `https://script.google.com/macros/s/AKfycbzvN9DT6Es0Lm6wKhUoihIYAXt_kPGXDUt2Oq1bjazZX1uW9wdSEwG6N9afkE3El9qA/exec?Nome completo=${required?.nome_1 ? required?.nome_1 : ''}&Numero de telefone-1=${required?.phone ? required.phone : ''}&Ano de nascimento-1=${required?.date ? required?.date : ''}&Cidade-1=${required?.city ? required?.city : ''}&Mensageiro de contato-1=${required?.messanger ? required?.messanger : ''}&Nome Completo do capitao=${required.nome_2 ? required?.nome_2 : ''}&Numero de telefone-2=${required?.phone_2 ? required?.phone_2 : ''}&Ano de nascimento-2=${required?.date_2 ? required?.date_2 : ''}&Numero de pessoas na equipe=${required?.amountPeopleTeam ? required?.amountPeopleTeam : ''}&Nome de equipe=${required?.teamName ? required?.teamName : ''}&Cidade-2=${required?.city_2 ? required?.city_2 : ''}&Mensageiro de contato-2=${required?.messanger_2 ? required?.messanger_2 : ''}&Sorce=${sbjs.get.current.src}&Medium=${sbjs?.get?.current?.mdm ? sbjs?.get?.current?.mdm : ""}&Campaign=${sbjs?.get?.current?.cmp ? sbjs?.get?.current?.cmp : ''}&Content=${sbjs?.get?.current?.cnt ? sbjs?.get?.current?.cnt : ''}&Date=${currentDate}`
       let getResponse;
       try {
           let getResults = await fetch(url, {method: 'Get', redirect: 'follow'});
