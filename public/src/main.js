@@ -49,7 +49,12 @@ inputNomeComplete.addEventListener('input', (e) => {
 })
 
 inputPhone.addEventListener('input', (e) => {
-    phone = mask._value
+    if(mask._value === '+55-__-____-____' || mask._unmaskedValue.length !== 10) {
+        phone = ''
+    }
+    else {
+        phone = mask._value
+    }
 })
 
 inputDate.addEventListener('input', (e) => {
@@ -105,7 +110,12 @@ inputNomeComplete_2.addEventListener('input', (e) => {
 })
 
 inputPhone_2.addEventListener('input', (e) => {
-    phone_2 = mask_2._value
+    if(mask_2._value === '+55-__-____-____' || mask_2._value.length !== 16) {
+        phone = ''
+    }
+    else {
+        phone_2 = mask_2._value
+    }
 })
 
 inputDate_2.addEventListener('input', (e) => {
@@ -164,6 +174,8 @@ async function sendFormTg(payload, required , typeForm) {
     const token = "6628761032:AAHF88h4rp7Sr-omd5vHm2p68azfrOt6vcI"
     const chat_id = '-1002135830957'
 
+    console.log('payload', payload)
+
     if(typeForm === 1 && (required.nome_1 === '' || required.phone === '' 
         || required.date === '' || required.city === '')) {
         promptError_2.style.display = 'none'
@@ -204,7 +216,7 @@ async function sendFormTg(payload, required , typeForm) {
           }
       }
 
-    try {
+    /*try {
       const response = await fetch(
         `https://api.telegram.org/bot${token}/sendMessage`,
         {
@@ -233,5 +245,5 @@ async function sendFormTg(payload, required , typeForm) {
       Array.from(buttonSend).forEach(el => {
         el.removeAttribute("disabled");
     })
-    }
+    }*/
   }
