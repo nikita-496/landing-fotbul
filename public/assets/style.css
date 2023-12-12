@@ -754,6 +754,9 @@ top: 15px
     line-height: 21.94px;
     font-size: 18px;
 }
+.success-subtitle_center{
+    text-align: center;
+}
 
 .modal-body__success{
     display: flex;
