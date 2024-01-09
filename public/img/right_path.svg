@@ -1,13 +1,3 @@
-<svg width="446" height="445" viewBox="0 0 446 445" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_155_1295)">
-<path d="M169.558 62.0883L233.088 120.574C233.088 120.574 264.465 161.047 267.082 194.11C269.928 230.071 242.078 299.248 242.078 299.248L187.537 419.436" stroke="#25CA71" stroke-opacity="0.85" stroke-dasharray="15 15"/>
-</g>
-<path d="M169.557 62.0883L233.202 120.528C233.202 120.528 264.634 160.978 267.253 194.041C270.101 230 242.192 299.202 242.192 299.202L187.537 419.436" stroke="#25CA71" stroke-dasharray="15 15"/>
-<defs>
-<filter id="filter0_f_155_1295" x="159.207" y="51.6338" width="118.543" height="377.922" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_155_1295"/>
-</filter>
-</defs>
+<svg width="99" height="359" viewBox="0 0 99 359" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.557163 1.08833L64.2021 59.5278C64.2021 59.5278 95.6342 99.9778 98.2531 133.041C101.101 169 73.1917 238.202 73.1917 238.202L18.5367 358.436" stroke="#FF630C" stroke-dasharray="15 15"/>
 </svg>
