@@ -95,7 +95,7 @@ button:focus {
 }
 .section_title{
     font-size: 24px;
-    color: rgba(255, 99, 12, 1);
+    color: #FFFFFF;
 }
 .sectiion-second .section_title{
     margin-bottom: 20px;
@@ -247,6 +247,12 @@ button:focus {
     background: url('../img/grass.png') no-repeat;
     background-size: 100% 100%;
     position: relative;
+}
+
+.sectiion-last-1-card-row .border-box-container{
+    max-width: 936px;
+    margin: 0 auto;
+    margin-top: 147px;
 }
 .sectiion-last-1-card-row{
     gap: 24px;
@@ -509,7 +515,7 @@ button:focus {
 
 .sectiion-last .section_title {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 75px;
 }
 .sectiion-last .container{
     padding: 0px 20px !important;
@@ -549,7 +555,7 @@ button:focus {
     text-align: center;
 }
 .sectiion-last-1-card-row .border-box-container{
-    height: 400px;
+    height: 455px;
     margin-top: 48px;
 }
 .sectiion-last-1-card-row .border-box-container_team {
@@ -918,7 +924,7 @@ top: 15px
         top: 40px;
     }
     .sectiion-last-1-card-col-image__blur{
-        left: 130px;
+        right: 0px;
         top: 120px;
     }
     .sectiion-last-1-card-col-image__team{
@@ -1102,7 +1108,7 @@ top: 15px
        
     }
       .sectiion-last-1-card-col-image__blur{
-        left: 216px;
+        right: 200px;
         top: 120px;
     }
     .sectiion-last-1-card-col-image__team{
@@ -1189,7 +1195,7 @@ top: 15px
     } 
  
     .sectiion-last-1-card-col-image__blur{
-      
+        right: 0px;
         top: 40px;
     }
     .sectiion-hero__col_image {
