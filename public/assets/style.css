@@ -136,7 +136,6 @@ button:focus {
     background: url('../img/grass.png') no-repeat;
     background-size: 100% 100%;
     position: relative;
-    margin-bottom: 15px;
     position: relative;
 }
 
@@ -719,6 +718,12 @@ top: 15px
     border-bottom: none !important;
     padding: 1.5rem 1.5rem;
 }
+.state-list-wrapper{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .btn-close{
     background: url('../img/close.svg') center/1em auto no-repeat !important;
     opacity: 1 !important;
@@ -1027,6 +1032,9 @@ top: 15px
     }
 }
 @media (min-width: 768px) {
+    .state-list{
+        max-width: 660px;
+    }
     .hero__title{
         font-size: 62px;
         line-height: 58px;
@@ -1352,6 +1360,7 @@ top: 15px
     }
     .sectiion-last-row-last_event_first{
         margin-top: 95px !important;
+        margin-bottom: 45px !important;
     }
     .list-col_first:hover .team_mini {
         position: relative;
