@@ -577,7 +577,7 @@ button:focus {
 }
 .sectiion-last-1-card-col-image__man {
     left: 110px;
-    top: 45px
+    top: 100px
 }
 .sectiion-last-1-card-col-image__team{
     left: 30px;
@@ -619,7 +619,7 @@ button:focus {
 
 .sectiion-last-1-col{
     position: relative;
-    top: 20px;
+    top: 50px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -926,7 +926,7 @@ top: 15px
     }
     .sectiion-last-1-card-col-image__man {
         left: 180px;
-        top: 40px;
+        top: 100px;
     }
     .sectiion-last-1-card-col-image__blur{
         right: 0px;
@@ -1187,7 +1187,7 @@ top: 15px
         align-items: initial !important;
         left: 30px;
         height: 260px;
-        top: 140px;
+        top: 340px;
         width: 160px !important;
         justify-content: space-between;
         
