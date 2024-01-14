@@ -168,16 +168,19 @@ form_2.addEventListener('click', () => {
     sendFormTg(payload_2, {nome_2, phone_2, date_2, amountPeopleTeam, teamName, city_2, messanger_2} , 2)
 })
 
+function validateName (name) {
+    var letters = /^[A-Za-z]+$/;
+    //console.log(name.match(letters))
+    return (name.match(letters))
+}
 
 async function sendFormTg(payload, required , typeForm) {
     event.preventDefault();
     const token = "6628761032:AAHF88h4rp7Sr-omd5vHm2p68azfrOt6vcI"
     const chat_id = '-1002135830957'
 
-    console.log('payload', payload)
-
-    if(typeForm === 1 && (required.nome_1 === '' || required.phone === '' 
-        || required.date === '' || required.city === '')) {
+    if(typeForm === 1 && (required.nome_1 === '' || !validateName(required.nome_1)?.input) || required.phone === '' 
+        || required.date === '' || required.city === '') {
         promptError_2.style.display = 'none'
         promptError.style.display = 'block'
         return
@@ -190,6 +193,8 @@ async function sendFormTg(payload, required , typeForm) {
         promptError_2.style.display = 'block'
         return
     }
+
+    //console.log('payload', payload)
 
 
     promptError.style.display = 'none'
