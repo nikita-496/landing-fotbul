@@ -38,7 +38,7 @@ const inputMessanger = document.getElementById('inputMessanger')
 
 
 var maskOptions = {
-    mask: '+55-00-0000-0000',
+    mask: '+55-00-0000-00000',
     lazy: false
 } 
 var mask = new IMask(inputPhone, maskOptions);
@@ -49,7 +49,7 @@ inputNomeComplete.addEventListener('input', (e) => {
 })
 
 inputPhone.addEventListener('input', (e) => {
-    if(mask._value === '+55-__-____-____' || mask._unmaskedValue.length !== 10) {
+    if(mask._value === '+55-__-____-____' || mask._value === '+55-__-____-_____' || mask._unmaskedValue.length < 10) {
         phone = ''
     }
     else {
@@ -179,6 +179,8 @@ async function sendFormTg(payload, required , typeForm) {
     const token = "6628761032:AAHF88h4rp7Sr-omd5vHm2p68azfrOt6vcI"
     const chat_id = '-1002135830957'
 
+    console.log('payload', payload)
+
     if(typeForm === 1 && (required.nome_1 === '' || !validateName(required.nome_1)?.input) || required.phone === '' 
         || required.date === '' || required.city === '') {
         //promptError_2.style.display = 'none'
@@ -194,7 +196,6 @@ async function sendFormTg(payload, required , typeForm) {
         return
     }*/
 
-    console.log('payload', payload)
 
 
     promptError.style.display = 'none'
