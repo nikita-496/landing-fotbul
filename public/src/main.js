@@ -169,7 +169,7 @@ form_2.addEventListener('click', () => {
 })
 
 function validateName (name) {
-    var letters = /^[A-Za-z]+$/;
+    var letters = /^(?:((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-.\s])){1,}(['’,\-\.]){0,1}){2,}(([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-. ]))*(([ ]+){0,1}(((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){1,})(['’\-,\.]){0,1}){2,}((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){2,})?)*)$/;
     //console.log(name.match(letters))
     return (name.match(letters))
 }
@@ -181,24 +181,24 @@ async function sendFormTg(payload, required , typeForm) {
 
     if(typeForm === 1 && (required.nome_1 === '' || !validateName(required.nome_1)?.input) || required.phone === '' 
         || required.date === '' || required.city === '') {
-        promptError_2.style.display = 'none'
+        //promptError_2.style.display = 'none'
         promptError.style.display = 'block'
         return
     }
-    else if(typeForm === 2 && (required.nome_2 === '' || required.phone_2 === ''
+    /*else if(typeForm === 2 && (required.nome_2 === '' || required.phone_2 === ''
                 || required.date_2 === '' || required.city_2 === ''
                 || required.amountPeopleTeam === '' || required.teamName === '')
          ) {
         promptError.style.display = 'none'
         promptError_2.style.display = 'block'
         return
-    }
+    }*/
 
-    //console.log('payload', payload)
+    console.log('payload', payload)
 
 
     promptError.style.display = 'none'
-    promptError_2.style.display = 'none'
+    //promptError_2.style.display = 'none'
 
     const buttonSend = document.querySelectorAll('.form-btn__modal_send')
     Array.from(buttonSend).forEach(el => {
