@@ -169,7 +169,7 @@ form_2.addEventListener('click', () => {
 })
 
 function validateName (name) {
-    var letters = /^(?:((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-.\s])){1,}(['’,\-\.]){0,1}){2,}(([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-. ]))*(([ ]+){0,1}(((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){1,})(['’\-,\.]){0,1}){2,}((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){2,})?)*)$/;
+    var letters = /^(?:((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-.\s])){1,}(['’,\-\.]){0,1}){2,}(([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-. ]))*(([ ]+){0,1}(((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){1,})(['’\-,\.]){0,1}){2,}((([^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]'’,\-\.\s])){2,})?)*)/;
     //console.log(name.match(letters))
     return (name.match(letters))
 }
@@ -179,14 +179,14 @@ async function sendFormTg(payload, required , typeForm) {
     const token = "6628761032:AAHF88h4rp7Sr-omd5vHm2p68azfrOt6vcI"
     const chat_id = '-1002135830957'
 
-    console.log('payload', payload)
-
     if(typeForm === 1 && (required.nome_1 === '' || !validateName(required.nome_1)?.input) || required.phone === '' 
         || required.date === '' || required.city === '') {
         //promptError_2.style.display = 'none'
         promptError.style.display = 'block'
         return
     }
+
+    console.log('payload', payload)
     /*else if(typeForm === 2 && (required.nome_2 === '' || required.phone_2 === ''
                 || required.date_2 === '' || required.city_2 === ''
                 || required.amountPeopleTeam === '' || required.teamName === '')
