@@ -663,6 +663,7 @@ button:focus {
 }
 .gallery img{
     height: 157px;
+    margin-left: 10px;
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     padding: 0px 25px !important;
@@ -1422,6 +1423,29 @@ top: 15px
     .gallery img{
         height: 350px;
     }
+    .gallery-1{
+        width: 546px !important;
+    }
+    .gallery-2{
+        width: 332px !important;
+    }
+    .gallery-3{
+        width: 332px !important;
+    }
+    .gallery-4{
+        width: 546px !important;
+    }
+    .gallery-5{
+        width: 546px !important;
+    }
+    .gallery-6{
+        width: 332px !important;
+    }
+    .gallery-7{
+        width: 332px !important;
+    }
+
+    
     .sectiion-grande_title-text{
         font-size: 36px;
         width: 200px;
