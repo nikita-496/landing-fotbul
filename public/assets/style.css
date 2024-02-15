@@ -584,12 +584,12 @@ button:focus {
     color: #FFFFFF;
     position: absolute;
     right: 0px;
-    bottom: 5px;
+    bottom: 8px;
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
-    left: 100px;
+    left: 98px;
     z-index: 100;
 }
 .sectiion-grande_footer_link-text:hover{
@@ -600,6 +600,7 @@ button:focus {
     text-transform: uppercase;
     color: #1C1C1D;
     line-height: 110%;
+    width: 211px;
 }
 .sectiion-grande_footer_text_bold{
     font-weight: bold;
@@ -990,6 +991,12 @@ top: 15px
 }
 .gallery{
     margin-top: 30px;
+}
+.sectiion-grande-arrow{
+    position: absolute;
+    bottom: 15px;
+    left: 40px;
+    width: 20px;
 }
 
 
@@ -1390,6 +1397,7 @@ top: 15px
     }
     .sectiion-grande_title-text{
         font-size: 36px;
+        width: 200px;
     }
     .sectiion-grande_text{
         font-size: 18px;
