@@ -91,6 +91,9 @@ button:focus {
     text-align: center;
     font-weight: 300;
 }
+.sectiion-hero__text_item{
+    font-size: 14px;
+}
 .section_title{
     font-size: 24px;
     color: #FFFFFF;
@@ -735,6 +738,14 @@ top: 15px
     z-index: 1000;
     text-align: center;
 }
+.sectiion-hero__text_list{
+    display: flex;
+    gap: 10px
+}
+.sectiion-hero__text_list{
+    font-size: 16px;
+    color: #FF630C;
+}
 .section-grande-container{
     margin: 0 30px;
 }
@@ -1007,6 +1018,9 @@ top: 15px
     }
 }
 @media (min-width: 576px){
+    .sectiion-hero__text_list{
+        font-size: 32px;
+    }
     .grande-team{
         position: absolute;
         right: 0;
@@ -1072,6 +1086,9 @@ top: 15px
     .sectiion-hero__text{
         font-size: 28px;
         line-height: 30px;
+    }
+    .sectiion-hero__text_item{
+        font-size: 24px;
     }
     .hero-card__text{
         font-size: 21px;
@@ -1218,6 +1235,10 @@ top: 15px
         font-size: 30px;
         line-height: 30px;
     }
+    .sectiion-hero__text_item{
+        font-size: 24px;
+    }
+
     .hero-card__text{
         font-size: 21px;
     }
@@ -1539,6 +1560,9 @@ top: 15px
     .sectiion-hero__text{
         font-size: 40px;
         line-height: 40px;
+    }
+    .sectiion-hero__text_item{
+        font-size: 32px;
     }
     .sectiion-hero__col-last{
         margin-top: 51px !important;
