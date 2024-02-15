@@ -108,11 +108,9 @@ button:focus {
 }
 .sectiion-third_text{
     width: 219px;
-    font-family: 'SuisseIntlLight', sans-serif !important;
 }
 .sectiion_subtitle{
     font-size: 18px;
-    font-family: 'SuisseIntlLight', sans-serif !important;
     font-weight: 300;
     width: 600px;
         color: #FFFFFF;
@@ -235,8 +233,7 @@ button:focus {
 .hero-card__text{
     font-size: 14px;
     color: #CACACE;
-    line-height: 24.32px;
-    font-family: 'SuisseIntlLight', sans-serif;
+    line-height: 24.32px;;
 }
 .sectiion-second{
     margin-top: 51px; 
@@ -480,7 +477,6 @@ button:focus {
 }
 .list-col__text{
     font-size: 18px;
-    font-family: 'SuisseIntlLight', sans-serif;
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -585,6 +581,7 @@ button:focus {
 }
 .sectiion-grande-star{
     width: 100px;
+    cursor: pointer;
 }
 .sectiion-grande_footer_link-item{
     cursor: pointer;
@@ -1095,7 +1092,7 @@ top: 15px
     }
     .sectiion-hero__text{
         font-size: 28px;
-        line-height: 30px;
+        line-height: 100%;
     }
     .sectiion-hero__text_item{
         font-size: 24px;
@@ -1243,7 +1240,6 @@ top: 15px
     }
     .sectiion-hero__text{
         font-size: 30px;
-        line-height: 30px;
     }
     .sectiion-hero__text_item{
         font-size: 24px;
@@ -1569,7 +1565,6 @@ top: 15px
     }
     .sectiion-hero__text{
         font-size: 40px;
-        line-height: 40px;
     }
     .sectiion-hero__text_item{
         font-size: 32px;
