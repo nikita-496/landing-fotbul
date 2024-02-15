@@ -81,15 +81,16 @@ button:focus {
 }
 .sectiion-hero__col-middle{
     margin-top: 15px !important;
+    gap: 20px;
 }
 .sectiion-hero__text{
     font-size: 18px;
-    line-height: 18px;
+    line-height: 100%;
     color: var(--white-8) !important;
-    padding-bottom: 50px;
-    font-family: 'SuisseIntlLight', sans-serif !important;
+    padding-bottom: 15px;
     text-align: center;
     font-weight: 300;
+    
 }
 .sectiion-hero__text_item{
     font-size: 14px;
@@ -117,12 +118,18 @@ button:focus {
         color: #FFFFFF;
 }
 .sectiion-hero__col_image {
-    display: flex;
-    justify-content: center;
     margin-top: 25px !important;
+    padding: 0px !important;
+}
+.sectiion-hero__col_image img{
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    right: 20px;
 }
 .sectiion-hero__col_content{
     align-items: center;
+    gap: 40px;
 }
 .sectiion-hero__col-last{
     margin-top: 25px !important;
@@ -1018,6 +1025,9 @@ top: 15px
     }
 }
 @media (min-width: 576px){
+    .sectiion-hero__col_image img {
+        right: 0px;
+    }
     .sectiion-hero__text_list{
         font-size: 32px;
     }
