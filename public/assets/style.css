@@ -661,7 +661,6 @@ button:focus {
     padding: 0px !important;
 }
 .gallery img{
-    height: 157px;
     margin-left: 10px;
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
@@ -1013,7 +1012,34 @@ top: 15px
     left: 40px;
     width: 20px;
 }
+.gallery img{
+    height: 200px;
+}
 
+.gallery-1{
+    width: 260px !important;
+}
+.gallery-2{
+    width: 180px !important;
+}
+.gallery-3{
+    width: 260px !important;
+}
+.gallery-4{
+    width: 260px !important;
+}
+.gallery-5{
+    width: 260px !important;
+}
+.gallery-6{
+    width: 180px !important;
+}
+.gallery-7{
+    width: 200px !important;
+}
+.gallery .slick-track{
+    display: flex;
+}
 
 /* MEDIA */
 @media (min-width: 480px){
@@ -1045,9 +1071,6 @@ top: 15px
     }
     .sectiion-grande-star{
         width: 160px;
-    }
-    .gallery img{
-        height: 229px;
     }
     .state-list-title{
         font-size: 33.48px;
@@ -1367,6 +1390,12 @@ top: 15px
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1340px !important;
     }
+    .gallery .slick-track{
+        display: block;
+    }
+    .gallery img{
+        height: 350px;
+    }
     .sectiion-grande_footer_link-decore{
         position: absolute;
         right: 50px;
@@ -1419,31 +1448,6 @@ top: 15px
         border-radius: 12px;
         height: auto;
     }
-    .gallery img{
-        height: 350px;
-    }
-    .gallery-1{
-        width: 546px !important;
-    }
-    .gallery-2{
-        width: 332px !important;
-    }
-    .gallery-3{
-        width: 332px !important;
-    }
-    .gallery-4{
-        width: 546px !important;
-    }
-    .gallery-5{
-        width: 546px !important;
-    }
-    .gallery-6{
-        width: 332px !important;
-    }
-    .gallery-7{
-        width: 332px !important;
-    }
-
     
     .sectiion-grande_title-text{
         font-size: 36px;
@@ -1735,6 +1739,27 @@ top: 15px
         text-decoration: none;
         z-index: 100;
     }
+    .gallery-1{
+        width: 546px !important;
+    }
+    .gallery-2{
+        width: 332px !important;
+    }
+    .gallery-3{
+        width: 332px !important;
+    }
+    .gallery-4{
+        width: 546px !important;
+    }
+    .gallery-5{
+        width: 546px !important;
+    }
+    .gallery-6{
+        width: 332px !important;
+    }
+    .gallery-7{
+        width: 332px !important;
+    }
 }
 
 @media (min-width: 1256px) {
@@ -1755,5 +1780,4 @@ top: 15px
         align-items: flex-end;
     }
 }
-
 
